@@ -1,0 +1,164 @@
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+
+    p, h4 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    p {
+        margin-bottom: 1.8rem;
+    }
+    h5 {
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+}
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+// Custom Slick Styles
+
+// Dots
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+
+    li {
+        margin: 0 0.25rem;
+        button {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            text-indent: -9999px;
+            background: $white !important;
+        }
+        &.slick-active {
+            button {
+                background: $primary !important;
+            }
+        }
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    border: 0;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    transition: .4s;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: $primary;
+    }
+
+    &.prev {
+        left: 0;
+        [dir="rtl"] & {
+            left: auto;
+            right: 0;
+        }
+
+    }
+    
+    &.next {
+        right: 0;
+        [dir="rtl"] & {
+            left: 0;
+            right: auto;
+        }
+    }
+}

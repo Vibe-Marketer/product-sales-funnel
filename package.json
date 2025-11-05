@@ -1,0 +1,42 @@
+{
+    "name": "product-sales-funnel-template",
+    "version": "1.0.0",
+    "description": "Product Sales Funnel Template - Complete landing page, opt-in, and thank you page system for product launches and e-commerce",
+    "main": "index.html",
+    "scripts": {
+        "build": "gulp build",
+        "dev": "gulp watch",
+        "start": "gulp",
+        "deploy": "npm run build"
+    },
+    "keywords": [
+        "sales-funnel",
+        "product",
+        "e-commerce",
+        "landing-page",
+        "opt-in",
+        "conversion",
+        "template",
+        "bootstrap",
+        "sass",
+        "gulp"
+    ],
+    "author": "Andrew Naegele",
+    "license": "MIT",
+    "browserslist": [
+        "last 2 version",
+        "> 2%"
+    ],
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^1.3.0",
+        "autoprefixer": "^9.6.1",
+        "browser-sync": "^2.26.7",
+        "cssnano": "^4.1.10",
+        "gulp": "^4.0.2",
+        "gulp-better-rollup": "^4.0.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^4.0.2",
+        "postcss-assets": "^5.0.0",
+        "rollup": "^1.27.8"
+    }
+}

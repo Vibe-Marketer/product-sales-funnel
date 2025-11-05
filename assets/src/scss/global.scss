@@ -1,0 +1,75 @@
+
+// --------------------
+// GLOBAL COMPONENTS
+//---------------------
+
+// Generic Section Padding - adds padding to each section - most of your sections should use this - override for special cases
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+// Background Images - positions the background image behind the content in the section
+.background-image-container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+	img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+    }
+}
+
+ul.styled-list {
+    padding-left: 0;
+    li {
+        position: relative;
+        list-style: none;
+        margin-bottom: 24px;
+        padding-left: 3.5rem;
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: "Font Awesome 5 Free";
+            font-size: 2rem;
+            line-height: 1;
+            font-style: normal;
+        }
+    }
+}
+
+img {
+    &.max-width {
+        width: 100%;
+        max-width: 300px;
+        @include media-breakpoint-up(md) {
+            max-width: 400px;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 100%;
+        }
+    }
+    &.guarantee,
+    &.credit-card {
+        max-width: 300px;
+    }
+    &.star {
+        max-width: 200px;
+    }
+}
+
+.box {
+    background-color: white;
+    border-radius: 0 4rem 0 4rem;
+    padding: 3rem;
+    box-shadow: 11px -1px 36px 0px rgba(19, 19, 19, 0.06);
+}

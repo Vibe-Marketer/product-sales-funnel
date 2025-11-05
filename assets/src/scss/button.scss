@@ -1,0 +1,28 @@
+// --------------------
+// BUTTON STYLE
+//---------------------
+
+.btn,
+button {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 30px;
+    border: 0;
+    color: #fff !important;
+    background: $primary;
+    font-family: 'Montserrat ExtraBold', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: normal;
+    text-decoration: none;
+    transition: background-color .4s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff !important;
+        background: rgba($primary, .8);
+    }
+}
